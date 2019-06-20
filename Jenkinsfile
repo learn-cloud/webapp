@@ -1,10 +1,18 @@
 #!groovy
 
-pipeline {
-    agent any
-    stages {
-        stage('clean') {
-            	deleteDir()
-            }
+pipeline
+{
+     agent any
+     stages
+     {
+        stage('clean')
+        {
+            steps
+             {
+                 deleteDir()
+                 echo "Cleaning completed"
+             }
+
         }
+     }
 }
