@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('Clean'){
 			deleteDir()
-			script{
+			steps{
 					echo "Deleting WorkSpace"
 					sh 'ls -ltr'
 			}
@@ -14,7 +14,7 @@ pipeline{
 		}
 
 		stage('Compile'){
-			script{
+			steps{
 				sh 'mvn complile'
 			}
 		}
