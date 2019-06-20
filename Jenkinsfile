@@ -15,9 +15,12 @@ pipeline
 
         }
 
-        stage('Checkout')
+        stage('checkout')
         {
-            checkout scm
+             steps
+             {
+                 checkout scm
+             }
         }
      }
 }
